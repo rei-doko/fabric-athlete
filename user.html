@@ -4,83 +4,101 @@
         <meta charset="UTF-8">
         <title>Fabric Athlete</title>
         <link rel="stylesheet" href="static/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="nav-left">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="user.html">User</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
-            <div class="logo-wrapper">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="logo">
-                </a>
+			<div class="logo-wrapper">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
             </div>
+			<div class="nav-right"></div>
         </header>
 
         <main>
             <section>
-                <article>
-                    <div class="user-wrapper">
-                        <h2> User Profile </h2>
-                        <div class="settings-menu-wrapper">
-                            <ul>
-                                <li><a href="#theme">Theme Settings</li>
-                                <li><a href="#billing">Billing Options</li>
-                                <li><a href="#info">Account Information</li>
-                            </ul>
+                <div class="user-wrapper">
+	<!--SIDEBAR-->
+                    <div class="settings-menu-wrapper">
+                        <h2> User Profile </h2><br>
+						<ul>
+							<li><button class="tab-btn active" data-target="theme">Theme Settings</button></li>
+							<li><button class="tab-btn" data-target="billing">Billing Options</button></li>
+							<li><button class="tab-btn" data-target="info">Account Information</button></li>
+							<li><button class="tab-btn" data-target="logout">Logout</button></li>
+						</ul>
+					</div>
+	<!--SETTINGS-->
+					<div class="settings-container">	
+		<!--THEME-->
+						<div class="settings-wrapper active" id="theme">
+							<div>
+								<h3> Theme Settings </h3> 
+							</div>
                         </div>
-                        <div class="settings-wrapper" id="theme">
-                            <h3> Theme Settings </h3>
-                            
-                        </div>
-                        <div class="billing-wrapper" id="billing">
-                            <h3> Billing Options </h3>
-                            <div class="input-group">
-                                <input type="text" id="card-info" placeholder="**** **** **** ****">
-                                <label for="card-info"> Card Information </label>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" id="expiry" placeholder="MM/YYYY">
-                                <label for="expiry"> Expiry Date </label>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" id="cvc" placeholder="***">
-                                <label for="cvc"> CVC </label>
-                            </div>
-                        </div>
-
-                        <div class=info-wrapper id="info">
-                            <h3> Account Information </h3>
-                            <div class="input-group">
-                                <input type="text" id="first-name">
-                                <label for="first-name"> First Name </label>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" id="last-name">
-                                <label for="last-name"> Last Name </label>
-                            </div>
-                            <div class="input-group">
-                                <input type="tel" id="contact-num">
-                                <label for="contact-num"> Contact Number </label>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" id="address">
-                                <label for="address"> Address </label>
-                            </div>
-                            <div class="input-group">
-                                <input type="email" id="email">
-                                <label for="email"> Email Address </label>
-                            </div>
-                            <div class="input-group">
-                                <input type="password" id="password">
-                                <label for="password"> Password </label>
-                            </div>
-                    </div>
-                </article>
+		<!--BILLING-->
+                        <div class="settings-wrapper" id="billing">
+							<div>
+								<h3> Billing Options </h3>
+								<div class="input-group">
+									<input type="text" id="card-info" placeholder="**** **** **** ****">
+									<label for="card-info"> Card Information </label>
+								</div>
+								<div class="input-group">
+									<input type="text" id="expiry" placeholder="MM/YYYY">
+									<label for="expiry"> Expiry Date </label>
+								</div>
+								<div class="input-group">
+									<input type="text" id="cvc" placeholder="***">
+									<label for="cvc"> CVC </label>
+								</div>
+							</div>	
+						</div>
+		<!--ACCOUNT-->
+                        <div class="settings-wrapper" id="info">
+							<div>
+								<h3> Account Information </h3>
+								<div class="input-group">
+									<input type="text" id="first-name">
+									<label for="first-name"> First Name </label>
+								</div>
+								<div class="input-group">
+									<input type="text" id="last-name">
+									<label for="last-name"> Last Name </label>
+								</div>
+								<div class="input-group">
+									<input type="tel" id="contact-num">
+									<label for="contact-num"> Contact Number </label>
+								</div>
+								<div class="input-group">
+									<input type="text" id="address">
+									<label for="address"> Address </label>
+								</div>
+								<div class="input-group">
+									<input type="email" id="email">
+									<label for="email"> Email Address </label>
+								</div>
+								<div class="input-group">
+									<input type="password" id="password">
+									<label for="password"> Password </label>
+								</div>
+							</div>
+						</div>
+	<!--LOGOUT-->
+						<div class="settings-wrapper" id="logout">
+							<div>
+								<h3>Logout</h3><br>
+								<button>Logout</button>
+							</div>
+						</div>
+					</div>
+				</div>
             </section>
         </main>
 
@@ -94,5 +112,6 @@
                 <small>Tel. No: 123-456-7890</small>
             </div>
         </footer>
+		<script src="static/script.js"></script>
     </body>
 </html>
