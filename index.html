@@ -4,46 +4,104 @@
         <meta charset="UTF-8">
         <title>Fabric Athlete</title>
         <link rel="stylesheet" href="static/style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="nav-left">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="user.html">User</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
-            <div class="logo-wrapper">
+			<div class="logo-wrapper">
                 <a href="index.html">
                     <img src="img/logo.png" alt="logo">
                 </a>
             </div>
+			
+			<div class="nav-right"></div>
+			
         </header>
 
         <main>
             <section>
-                <article>
+                <article class="shop-layout">
+				
+				
+				
+	<!--STORE-->
+				
                     <div class="store-wrapper">
+					<h2>Featured Products</h2>
                         <div class="featured-wrapper">
-
+							<div class="product">
+								<img src="img/shoes.jpg" alt="shoes">
+								<h3>Madidas Sports Shoes</h3>
+								<p>Php 1,599.00</p>
+							</div>
+							
+							<div class="product">
+								<img src="img/shirt.png" alt="shirt">
+								<h3>Nickeys “I should probably do it” Shirt</h3>
+								<p>Php 699.00</p>
+							</div>
+							
+							<div class="product">
+								<img src="img/basketball.png" alt="basketball">
+								<h3>Molten Basketball</h3>
+								<p>Php 6,999.00</p>
+							</div>
                         </div>
                     </div>
+				
+				
+				
+	<!--CHECKOUT-->
+				
                     <div class="checkout-wrapper">
                         <h2> Checkout </h2>
-                        <div class="item-wrapper">
-                            <p> placeholder </p>
-                        </div>
+							<div class="item-wrapper">
+								<img src="img/shoes.jpg" alt="shoes">
+								<h3>Madidas Sports Shoes</h3>
+								<p>Php 1,599.00</p>
+							</div>
+							
+							<div class="item-wrapper">
+								<img src="img/shirt.png" alt="shirt">
+								<h3>Nickeys “I should probably do it” Shirt</h3>
+								<p>Php 699.00</p>
+							</div>
+							
+							<div class="item-wrapper">
+								<img src="img/basketball.png" alt="basketball">
+								<h3>Molten Basketball</h3>
+								<p>Php 6,999.00</p>
+							</div>
+							
                         <form class="checkout-button">
                             <h2> Total </h2>
-                            <p> Php 000.00 </p>
-                            <button> Purchase </button>
+                            <p> Php 9,297.00 </p>
+							
+                            <button type="submit">Purchase</button>
+							
                             <input type="checkbox" id="terms">
-                            <label for="terms"> I want to receive news and promotional offers about Fabric Athlete </label>
+                            <label for="terms">I want to receive news and promotional offers about Fabric Athlete</label>
                         </form>
                     </div>
+	
+	<!--CUSTOMIZATION-->
+	
                     <div class="customize-wrapper">
-
+						<h2>Customize</h2>
+						<p>Choose Product Color</p>
+						
+						<select>
+						<option>Navy Blue</option>
+						<option>White</option>
+						</select>
+						
                     </div>
                 </article>
             </section>
