@@ -87,9 +87,15 @@ nav ul li a:hover {
 
 .shop-layout {
 	display: flex;
-    gap: 20px;
-    padding: 30px;
-    flex-wrap: flex-start;
+	align-items: flex-start;
+    gap: 30px;
+}
+
+.shop-wrapper-left {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 }
 
 /*STORE*/
@@ -195,11 +201,18 @@ nav ul li a:hover {
 /*CHECKOUT*/
 
 .checkout-wrapper{
-	flex: 1;
-  background:white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 10px 15px rgba(25,25,25,0.5);
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+	flex-shrink: 0;
+	top: 110px;
+	width: 365px;
+	max-height: calc(100vh - 120px);
+	overflow: auto;
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 10px 15px rgba(25,25,25);
 }
 
 .checkout-wrapper h2{
