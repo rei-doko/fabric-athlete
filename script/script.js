@@ -13,3 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 });
+
+function toggleTheme(selected) {
+  const lightBox = document.getElementById('light-theme');
+  const darkBox = document.getElementById('dark-theme');
+
+  if (selected === 'light') {
+    darkBox.checked = false;
+    lightBox.checked = true;
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    lightBox.checked = false;
+    darkBox.checked = true;
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+}
