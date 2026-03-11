@@ -48,12 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
     const cartButtons = document.querySelectorAll('.addcart');
-const checkoutWrapper = document.querySelector('.checkout-wrapper');
-const totalElement = document.querySelector('.checkout-button p');
+    const checkoutWrapper = document.querySelector('.checkout-wrapper');
+    const totalElement = document.querySelector('.checkout-button p');
 
-let total = 0;
+    let total = 0;
 
-cartButtons.forEach(button => {
+    cartButtons.forEach(button => {
 
     button.addEventListener('click', (e) => {
 
@@ -64,8 +64,6 @@ cartButtons.forEach(button => {
         const name = product.dataset.name;
         const price = parseInt(product.dataset.price);
         const img = product.dataset.img;
-
-        /* Create checkout item */
 
         const item = document.createElement('div');
         item.classList.add('item-wrapper','d-flex','align-items-center','mb-3','justify-content-between');
@@ -85,18 +83,24 @@ cartButtons.forEach(button => {
         checkoutWrapper.insertBefore(item, document.querySelector('.checkout-button'));
 
         total += price;
-        totalElement.textContent = "Php " + total.toLocaleString();
+        totalElement.textContent = "Php " + total.toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
 
         item.querySelector('.remove-item').addEventListener('click', () => {
 
             item.remove();
 
             total -= price;
-            totalElement.textContent = "Php " + total.toLocaleString();
+            totalElement.textContent = "Php " + total.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
 
         });
 
     });
 
+});
 });
 });
