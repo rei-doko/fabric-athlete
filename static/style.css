@@ -223,6 +223,7 @@ nav ul li a:hover {
 	background:linear-gradient(rgb(230,60,70),rgb(200,30,45));
 	box-shadow: 0 4px 15px rgba(96, 26, 3, 0.2);
 	color:white;
+	font-family:'Poppins',sans-serif;
 	font-size:13px;
 	font-weight:500;
 
