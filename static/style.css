@@ -204,8 +204,7 @@ nav ul li a:hover {
     top: 120px;
     width: auto; 
     max-width: 365px; 
-    max-height: calc(100vh - 150px);
-    overflow-y: auto;
+    height: min-content;
     background: white;
     padding: 20px;
     border-radius: 8px;
