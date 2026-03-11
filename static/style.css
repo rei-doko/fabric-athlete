@@ -86,16 +86,14 @@ nav ul li a:hover {
 /*SHOP*/
 
 .shop-layout {
-	display: flex;
-	align-items: flex-start;
-    gap: 30px;
+    padding: 20px;
 }
 
 .shop-wrapper-left {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 0;
 }
 
 /*STORE*/
@@ -107,8 +105,7 @@ nav ul li a:hover {
 
 .featured-wrapper{
 	display: flex;
-  	flex-wrap: wrap;
-  	gap: 20px;
+    flex-wrap: wrap;
 }
 
 /*PROD*/
@@ -120,18 +117,18 @@ nav ul li a:hover {
 
 .product{
 	position: relative;
-	flex: 1 1 220px;
 	display:flex;
 	flex-direction: column;
-	border-radius:10px;
-	padding:15px;
-	text-align:center;
-	box-shadow: 0 4px 15px rgba(29,53,87,0.2);
-	/*IMAGEBG*/
-	background:linear-gradient(rgb(50,50,75), rgb(25,25,50));
-	cursor:pointer;
-	transition: transform 0.3s ease;
-	overflow: hidden;
+	height: 100%;
+	border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(29,53,87,0.2);
+	/*img bg*/
+    background: linear-gradient(rgb(50,50,75), rgb(25,25,50));
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .product::before{
@@ -200,19 +197,19 @@ nav ul li a:hover {
 
 /*CHECKOUT*/
 
-.checkout-wrapper{
-	display: flex;
-	flex-direction: column;
-	position: sticky;
-	flex-shrink: 0;
-	top: 110px;
-	width: 365px;
-	max-height: calc(100vh - 120px);
-	overflow: auto;
-	background: white;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0 10px 15px rgba(25,25,25);
+.checkout-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 120px;
+    width: auto; 
+    max-width: 365px; 
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(25,25,25, 0.5);
 }
 
 .checkout-wrapper h2{
@@ -220,9 +217,15 @@ nav ul li a:hover {
 }
 
 .item-wrapper{
-	border-bottom:1px solid #dddddd;
-	padding-bottom:8px;
-	margin-bottom:10px;
+	display: flex;
+    align-items: center;
+}
+
+.item-wrapper img {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 4px;
 }
 
 .checkout-button h3{
