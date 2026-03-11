@@ -460,6 +460,18 @@ article img{
 	margin-top:10px;
 }
 
+.about-table td, th, table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 20px;
+	background-color: #fffafa;
+}
+
+.location-layout {
+	display: flex;
+	gap: 30px;
+}
+
 /*FOOTER*/
 
 footer{
