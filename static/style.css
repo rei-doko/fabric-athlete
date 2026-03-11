@@ -299,10 +299,10 @@ nav ul li a:hover {
 /*USER*/
 
 .user-wrapper{
-	display:flex;
-	gap:20px;
-	padding:30px;
-	align-items: flex-start;
+	display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 30px;
 }
 
 /*SETTINGS*/
@@ -333,13 +333,19 @@ nav ul li a:hover {
 }
 
 .settings-menu-wrapper li a{
-	text-decoration:none;
-	color:rgb(30,30,30);
-	display:block;
+	width: 100%;
+    min-width: 200px;
+    flex-shrink: 0;
+    background: linear-gradient(rgb(50,50,75), rgb(25,25,50));
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 10px 15px rgba(25,25,25,0.5);
 }
 
 .settings-container {
-	flex:1;
+	flex: 1;
+    min-width: 0;
 }
 
 .settings-wrapper{
