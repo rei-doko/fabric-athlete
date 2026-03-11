@@ -26,7 +26,8 @@ body {
 	display:flex;
 	flex-direction:column;
 	font-family:'Poppins',sans-serif;
-    background:linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20));
+    background:var(--bg);
+	color:var(--text-color);
 	margin:0;
 }
 
