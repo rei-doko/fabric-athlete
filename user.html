@@ -45,13 +45,15 @@
 							<div class="settings-wrapper active" id="theme">
 								<div>
 									<h3> Theme Settings </h3>
-									<div class ="input-group">
-										<input type="checkbox" id="light">
-										<label for="light"> Light </label>
-									</div>
-									<div class ="input-group">
-										<input type="checkbox" id="dark">
-										<label for="dark"> Dark </label>
+									<div class="theme-select">
+										<div class="input-group">
+											<input type="checkbox" id="light-theme" onclick="toggleTheme('light')" checked>
+											<label for="light-theme"> Light </label>
+										</div>
+										<div class="input-group">
+											<input type="checkbox" id="dark-theme" onclick="toggleTheme('dark')">
+											<label for="dark-theme"> Dark </label>
+										</div>
 									</div>
 								</div>
 							</div>
