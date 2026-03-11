@@ -1,3 +1,17 @@
+function toggleTheme(clickedCheckbox) {
+  const lightBox = document.getElementById('light-theme');
+  const darkBox = document.getElementById('dark-theme');
+
+  if (clickedCheckbox.id === 'light-theme' && clickedCheckbox.checked) {
+    darkBox.checked = false;
+    document.documentElement.style.setProperty('--bg-color','linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20))');
+  }
+  else if (clickedCheckbox.id === 'dark-theme' && clickedCheckbox.checked) {
+    lightBox.checked = false;
+    document.documentElement.style.setProperty('--bg-color','linear-gradient(rgb(50,65,75),rgb(50,50,75),rgb(20,20,45),rgb(0,0,25))');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const tabs=document.querySelectorAll('.tab-btn');
 	const contents=document.querySelectorAll('.settings-wrapper');
