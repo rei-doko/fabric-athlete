@@ -1,16 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	box-sizing:border-box;
 }
 
 main {
 	flex:1;
-    padding-top: 110px;
+	padding-top: 110px;
 }
 
 :root {
-    --bg-color: linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20));
+	--bg-color: linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20));
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 	display:flex;
 	flex-direction:column;
 	font-family:'Poppins',sans-serif;
-    background:var(--bg-color);
+	background:var(--bg-color);
 	margin:0;
 }
 
@@ -37,11 +37,11 @@ header{
 }	
 
 header nav ul li a {
-    color:rgb(30,30,30);
+	color:rgb(30,30,30);
 }
 
 header nav ul li a:hover {
-    color:white;
+	color:white;
 }
 
 /*NAV*/
@@ -52,28 +52,28 @@ header nav ul li a:hover {
 }
 
 .nav-right{
-    justify-self:end;
+	justify-self:end;
 	padding-right:40px;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
+	display:flex;
+	list-style:none;
 }
 
 nav ul li a {
-    display:block;
-    padding:10px 16px;
-    margin:10px;
-    color:black;
-    text-decoration:none;
+	display:block;
+	padding:10px 16px;
+	margin:10px;
+	color:black;
+	text-decoration:none;
 	border-radius:6px;
 	transition:0.25s;
 }
 
 nav ul li a:hover {
-    background:linear-gradient(rgb(220,50,25), rgb(220,25,2));
-    color:white;
+	background:linear-gradient(rgb(220,50,25), rgb(220,25,2));
+	color:white;
 }
 
 /*LOGO*/
@@ -84,20 +84,20 @@ nav ul li a:hover {
 }
 
 .logo-wrapper img{
-    height:75px;
+	height:75px;
 }
 
 /*SHOP*/
 
 .shop-layout {
-    padding: 20px;
+	padding: 20px;
 }
 
 .shop-wrapper-left {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	min-width: 0;
 }
 
 /*STORE*/
@@ -113,14 +113,14 @@ nav ul li a:hover {
 
 .featured-wrapper{
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 /*PROD*/
 
 .product-row {
-  display: flex;
-  gap: 20px;
+	display: flex;
+	gap: 20px;
 }
 
 .product{
@@ -129,14 +129,14 @@ nav ul li a:hover {
 	flex-direction: column;
 	height: 100%;
 	border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(29,53,87,0.2);
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0 4px 15px rgba(29,53,87,0.2);
 	/*img bg*/
-    background: linear-gradient(rgb(50,50,75), rgb(25,25,50));
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    overflow: hidden;
+	background: linear-gradient(rgb(50,50,75), rgb(25,25,50));
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	overflow: hidden;
 }
 
 .product::before{
@@ -145,7 +145,7 @@ nav ul li a:hover {
 	top:0;
 	left:0;
 	width: 100%;
-  	height: 100%;
+	height: 100%;
 	background:url('img/prod-bg.jpg') center/cover no-repeat;
 	opacity:0.1;
 	z-index:0;
@@ -185,17 +185,17 @@ nav ul li a:hover {
 .product-description{
 	max-height: 0;
 	overflow: hidden;
- 	opacity: 0;
+	opacity: 0;
 	transform: translateY(-10px);
-  	transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
-  	margin-top: 0;
+	transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+	margin-top: 0;
 	z-index: 1;
 }
 
 .product-description p{
-    margin-top:10px;
-    font-size:13px;
-    line-height:1.4;
+	margin-top:10px;
+	font-size:13px;
+	line-height:1.4;
 }
 
 .product.active .product-description{
@@ -212,40 +212,41 @@ nav ul li a:hover {
 }
 
 .product.active .addcart{
-    display:block;
+	display:block;
 
-    margin-top:12px;
-    padding:8px 12px;
-    width:100%;
-    border:none;
-    border-radius:6px;
+	margin-top:12px;
+	padding:8px 12px;
+	width:100%;
+	border:none;
+	border-radius:6px;
 
-    background:linear-gradient(rgb(230,60,70),rgb(200,30,45));
-    color:white;
-    font-size:13px;
-    font-weight:500;
+	background:linear-gradient(rgb(230,60,70),rgb(200,30,45));
+	box-shadow: 0 4px 15px rgba(96, 26, 3, 0.2);
+	color:white;
+	font-size:13px;
+	font-weight:500;
 
-    cursor:pointer;
+	cursor:pointer;
 }
 
 .addcart:hover{
-    background:linear-gradient(rgb(200,30,45),rgb(175,20,30));
+	background:linear-gradient(rgb(200,30,45),rgb(175,20,30));
 }
 
 /*CHECKOUT*/
 
 .checkout-wrapper {
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    top: 120px;
-    width: auto; 
-    max-width: 365px; 
-    height: min-content;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 15px rgba(25,25,25, 0.5);
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+	top: 120px;
+	width: auto; 
+	max-width: 365px; 
+	height: min-content;
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 10px 15px rgba(25,25,25, 0.5);
 }
 
 .checkout-wrapper h2{
@@ -254,20 +255,32 @@ nav ul li a:hover {
 }
 
 .remove-item{
-    margin-left:10px;
+background:transparent;
+	border:none;
+	color:rgb(150, 10, 20);
+	font-size:18px;
+	font-weight:bold;
+	cursor:pointer;
+	padding:4px 8px;
+	transition:0.2s;
+}
+
+.remove-item:hover{
+	color:rgb(230, 50, 50);
+	transform:scale(1.2);
 }
 
 .item-wrapper{
 	display: flex;
-    align-items: center;
+	align-items: center;
 	color: black;
 }
 
 .item-wrapper img {
-    width: 60px;
-    height: auto;
-    margin-right: 15px;
-    border-radius: 4px;
+	width: 60px;
+	height: auto;
+	margin-right: 15px;
+	border-radius: 4px;
 }
 
 .item-wrapper p {
@@ -315,7 +328,7 @@ nav ul li a:hover {
 .customize-wrapper{
 	display: flex;
 	flex-direction: column;
-    min-width: 0;
+	min-width: 0;
 }
 
 .customize-wrapper h2 {
@@ -351,13 +364,32 @@ nav ul li a:hover {
 	padding:5px;
 }
 
+.terms-wrapper{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+.terms-wrapper input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.terms-wrapper label {
+	cursor: pointer;
+	color: rgb(50, 50, 50);
+}
+
 /*USER*/
 
 .user-wrapper{
 	display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    padding: 30px;
+	flex-wrap: wrap;
+	gap: 0;
+	padding: 30px;
 }
 
 /*SETTINGS*/
@@ -389,13 +421,13 @@ nav ul li a:hover {
 
 .settings-menu-wrapper li a{
 	width: 100%;
-    min-width: 200px;
-    flex-shrink: 0;
-    background: linear-gradient(rgb(50,50,75), rgb(25,25,50));
-    border-radius: 10px;
-    padding: 10px;
-    color: white;
-    box-shadow: 0 10px 15px rgba(25,25,25,0.5);
+	min-width: 200px;
+	flex-shrink: 0;
+	background: linear-gradient(rgb(50,50,75), rgb(25,25,50));
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+	box-shadow: 0 10px 15px rgba(25,25,25,0.5);
 }
 
 .settings-container {

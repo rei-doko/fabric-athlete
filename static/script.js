@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${img}" style="width:50px;" class="me-3">
                 <div>
                     <h3 class="h6 mb-0">${name}</h3>
-                    <p class="small mb-0">Php ${price.toLocaleString()}</p>
+                    <p class="small mb-0">Php ${price.toLocaleString()}.00</p>
                 </div>
             </div>
 
-            <button class="remove-item btn btn-sm btn-outline-danger">X</button>
+            <button class="remove-item">🗑</button>
         `;
 
         checkoutWrapper.insertBefore(item, document.querySelector('.checkout-button'));
