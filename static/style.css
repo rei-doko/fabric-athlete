@@ -86,35 +86,46 @@ nav ul li a:hover {
 /*SHOP*/
 
 .shop-layout {
-	display:flex;
-	gap:30px;
-	padding:30px;
+	display: flex;
+    gap: 20px;
+    padding: 30px;
+    flex-wrap: flex-start;
 }
 
 /*STORE*/
 
 .store-wrapper{
-	width:60%;
+	flex:2;
+	min-width:0;
 }
 
-.featured-wrapper {
-	display:grid;
-	grid-template-columns:repeat(3, 1fr);
-	gap:20px;
+.featured-wrapper{
+	display: flex;
+  	flex-wrap: wrap;
+  	gap: 20px;
 }
 
 /*PROD*/
 
+.product-row {
+  display: flex;
+  gap: 20px;
+}
+
 .product{
-	border-radius:6px;
+	position: relative;
+	flex: 1 1 220px;
+	display:flex;
+	flex-direction: column;
+	border-radius:10px;
 	padding:15px;
 	text-align:center;
-	overflow:hidden;
 	box-shadow: 0 4px 15px rgba(29,53,87,0.2);
 	/*IMAGEBG*/
-	position:relative;
-	min-height: 250px;
 	background:linear-gradient(rgb(50,50,75), rgb(25,25,50));
+	cursor:pointer;
+	transition: transform 0.3s ease;
+	overflow: hidden;
 }
 
 .product::before{
@@ -122,13 +133,12 @@ nav ul li a:hover {
 	position:absolute;
 	top:0;
 	left:0;
-	right:0;
-	bottom:0;
-	background:url('../img/prod-bg.jpg') center/cover no-repeat;
+	width: 100%;
+  	height: 100%;
+	background:url('img/prod-bg.jpg') center/cover no-repeat;
 	opacity:0.1;
 	z-index:0;
 	pointer-events:none;
-	display:block;
 }
 
 .product img{
@@ -159,17 +169,37 @@ nav ul li a:hover {
 	background:linear-gradient(rgb(200,125,100), rgb(200,75,25));
 	border-color: rgb(230, 60, 70);
 	transform:scale(1.025);
-	transition:0.25s;
+}
+
+.product-description{
+	max-height: 0;
+	overflow: hidden;
+ 	opacity: 0;
+  	transition: max-height 0.4s ease, opacity 0.3s ease;
+  	margin-top: 0;
+	z-index: 1;
+}
+
+.product-description p{
+    margin-top:10px;
+    font-size:13px;
+    line-height:1.4;
+}
+
+.product.active .product-description{
+	max-height: 500px;
+	opacity: 1;
+	margin-top: 10px;
 }
 
 /*CHECKOUT*/
 
 .checkout-wrapper{
-	width:25%;
-	background:#f7f7f7;
-	padding:20px;
-	border-radius:8px;
-	box-shadow: 0 10px 15px rgba(25,25,25,0.5);
+	flex: 1;
+  background:white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(25,25,25,0.5);
 }
 
 .checkout-wrapper h2{
@@ -216,7 +246,8 @@ nav ul li a:hover {
 /*CUSTOMIZATION*/
 
 .customize-wrapper{
-	width:15%;
+	flex: 1.5;
+    min-width: 0
 }
 
 .customize-wrapper select{
