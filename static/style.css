@@ -178,7 +178,8 @@ nav ul li a:hover {
 	max-height: 0;
 	overflow: hidden;
  	opacity: 0;
-  	transition: max-height 0.4s ease, opacity 0.3s ease;
+	transform: translateY(-10px);
+  	transition: max-height 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
   	margin-top: 0;
 	z-index: 1;
 }
@@ -193,6 +194,34 @@ nav ul li a:hover {
 	max-height: 500px;
 	opacity: 1;
 	margin-top: 10px;
+	transform: translateY(0);
+}
+
+/*ADDCART*/
+
+.addcart{
+	display:none;
+}
+
+.product.active .addcart{
+    display:block;
+
+    margin-top:12px;
+    padding:8px 12px;
+    width:100%;
+    border:none;
+    border-radius:6px;
+
+    background:linear-gradient(rgb(230,60,70),rgb(200,30,45));
+    color:white;
+    font-size:13px;
+    font-weight:500;
+
+    cursor:pointer;
+}
+
+.addcart:hover{
+    background:linear-gradient(rgb(200,30,45),rgb(175,20,30));
 }
 
 /*CHECKOUT*/
@@ -213,6 +242,10 @@ nav ul li a:hover {
 
 .checkout-wrapper h2{
 	margin-bottom:15px;
+}
+
+.remove-item{
+    margin-left:10px;
 }
 
 .item-wrapper{
