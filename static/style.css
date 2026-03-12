@@ -227,6 +227,13 @@ select{
 	flex-shrink:0;
 }
 
+.selectcolor-wrapper label {
+	color: white;
+	font-size: 14px;
+	display: block;
+	margin-bottom: 5px;
+}
+
 /*ADDCART*/
 
 .addcart{
@@ -342,13 +349,33 @@ background:transparent;
 	color: black;
 }
 
+/*TERMS*/
+
+.terms-wrapper {
+	display:flex;
+	align-items:center;
+	gap:8px;
+	font-size:14px;
+}
+
+.terms-wrapper input[type="checkbox"] {
+	width:16px;
+	height:16px;
+	cursor:pointer;
+}
+
+.terms-wrapper label {
+	cursor:pointer;
+	color:rgb(50,50,50);
+}
+
 /*USER*/
 
 .user-wrapper{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0;
-	padding: 30px;
+	display:flex;
+	flex-wrap:wrap;
+	gap:0;
+	padding:30px;
 }
 
 /*SETTINGS*/
