@@ -15,7 +15,7 @@ main {
 }
 
 [data-theme="dark"] {
-	--bg-color: linear-gradient(rgb(32,33,62), rgb(25,26,48), rgb(15,15,25), rgb(0,0,0));
+	--bg-color: linear-gradient(rgb(50,65,75),rgb(50,50,75),rgb(20,20,45),rgb(0,0,25));
 	--text-color: white;
 }
 
