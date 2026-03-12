@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         p.querySelector('.product-description').style.maxHeight = null;
       });
 
+      // Toggles the description of the active product
       if (!isActive) {
         product.classList.add('active');
         desc.style.maxHeight = desc.scrollHeight + "px";
