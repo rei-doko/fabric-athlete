@@ -46,7 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+  const selects = document.querySelectorAll('.product select');
 
+    selects.forEach(select => {
+      select.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    });
     const cartButtons = document.querySelectorAll('.addcart');
     const checkoutWrapper = document.querySelector('.checkout-wrapper');
     const totalElement = document.querySelector('.checkout-button p');
@@ -60,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
 
         const product = button.closest('.product');
-
+        const colorSelect = product.querySelector('select');
+        const color = colorSelect ? colorSelect.value : "";
         const name = product.dataset.name;
         const price = parseInt(product.dataset.price);
         const img = product.dataset.img;
@@ -69,15 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
         item.classList.add('item-wrapper','d-flex','align-items-center','mb-3','justify-content-between');
 
         item.innerHTML = `
-            <div class="d-flex align-items-center">
-                <img src="${img}" style="width:50px;" class="me-3">
-                <div>
-                    <h3 class="h6 mb-0">${name}</h3>
-                    <p class="small mb-0">Php ${price.toLocaleString()}.00</p>
-                </div>
+          <div class="d-flex align-items-center">
+            <img src="${img}" style="width:50px;" class="me-3">
+            <div>
+              <h3 class="h6 mb-0">${name}</h3>
+              <p class="small mb-0">Color: ${color}</p>
+              <p class="small mb-0">Php ${price.toLocaleString()}.00</p>
             </div>
+          </div>
 
-            <button class="remove-item">🗑</button>
+          <button class="remove-item">🗑</button>
         `;
 
         checkoutWrapper.insertBefore(item, document.querySelector('.checkout-button'));
@@ -96,11 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
             totalElement.textContent = "Php " + total.toLocaleString(undefined, {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2
-
         });
-
     });
-
+    
 });
 });
 });

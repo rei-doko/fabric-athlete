@@ -206,6 +206,21 @@ nav ul li a:hover {
 	transform: translateY(0);
 }
 
+/*SELECTCOLOR*/
+
+select{
+	width:100%;
+	height:40px;
+	font-family:'Poppins',sans-serif;
+	font-size:13px;
+	font-weight:500;
+}
+
+.selectcolor-wrapper{
+	min-width: 220px;
+	flex-shrink:0;
+}
+
 /*ADDCART*/
 
 .addcart{
@@ -229,10 +244,6 @@ nav ul li a:hover {
 	font-weight:500;
 
 	cursor:pointer;
-}
-
-.addcart:hover{
-	background:linear-gradient(rgb(200,30,45),rgb(175,20,30));
 }
 
 /*CHECKOUT*/
@@ -323,47 +334,6 @@ background:transparent;
 	margin-top:10px;
 	font-size:12px;
 	color: black;
-}
-
-/*CUSTOMIZATION*/
-
-.customize-wrapper{
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-}
-
-.customize-wrapper h2 {
-	color: var(--text-color);
-}
-
-.box-wrapper {
-	display: flex;
-	flex-direction: column;
-	background-color: white;
-	padding: 20px;
-	border-radius: 10px;
-	gap: 15px;
-	box-shadow: 0 10px 15px rgba(25,25,25,0.5);
-}
-
-.terms-wrapper{
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	font-size: 14px;
-	margin-top: 10px;
-}
-
-.terms-wrapper input[type="checkbox"] {
-	width: 16px;
-	height: 16px;
-	cursor: pointer;
-}
-
-.terms-wrapper label {
-	cursor: pointer;
-	color: rgb(50, 50, 50);
 }
 
 /*USER*/
