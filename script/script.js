@@ -27,14 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+  // Product Container - opening and closing description
+
   const products = document.querySelectorAll('.product');
 
   products.forEach(product => {
     const desc = product.querySelector('.product-description');
 
     product.addEventListener('click', () => {
+      // Activates the product
       const isActive = product.classList.contains('active');
 
+      // Closes descriptions of all products except active
       products.forEach(p => {
         p.classList.remove('active');
         p.querySelector('.product-description').style.maxHeight = null;
@@ -46,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Cart
 
     const cartButtons = document.querySelectorAll('.addcart');
     const checkoutWrapper = document.querySelector('.checkout-wrapper');
