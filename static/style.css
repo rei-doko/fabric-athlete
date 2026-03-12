@@ -84,7 +84,8 @@ nav ul li a:hover {
 }
 
 .logo-wrapper img{
-	height:75px;
+	width: auto;
+	height:50px;
 }
 
 /*SHOP*/
@@ -242,7 +243,7 @@ nav ul li a:hover {
 	position: sticky;
 	top: 120px;
 	width: auto; 
-	max-width: 365px; 
+	max-width: 365px;
 	height: min-content;
 	background: white;
 	padding: 20px;
@@ -338,31 +339,12 @@ background:transparent;
 
 .box-wrapper {
 	display: flex;
+	flex-direction: column;
 	background-color: white;
 	padding: 20px;
 	border-radius: 10px;
 	gap: 15px;
 	box-shadow: 0 10px 15px rgba(25,25,25,0.5);
-}
-
-.selection-wrapper {
-	background-color: white;
-	border-radius: 10px;
-	padding: 20px;
-	color: black;
-}
-
-.options-wrapper {
-	display: flex;
-	padding: 20px;
-	border-radius: 10px;
-	background-color: lightblue;
-	color: black;
-}
-
-.customize-wrapper select{
-	margin-top:10px;
-	padding:5px;
 }
 
 .terms-wrapper{
@@ -497,6 +479,10 @@ background:transparent;
 
 /*ABOUT*/
 
+#about-title {
+	margin-left: 15%;
+}
+
 article{
 	padding:30px;
 }
@@ -517,17 +503,51 @@ article img{
 	margin-top:10px;
 }
 
-.about-table td, th, table {
-	border: 1px solid black;
+.about-table {
 	border-collapse: collapse;
+	border-radius: 15px;
+	overflow: hidden;
+	background-color: white;
+	box-shadow:0 10px 15px rgba(25,25,25,0.5);
+}
+
+.about-table thead {
+	background-color: lightgray;
+}
+
+.about-table td, th {
 	padding: 20px;
-	background-color: #fffafa;
 	color: black;
 }
 
-.location-layout {
+.about-table thead tr:last-child th {
+	border-bottom: none;
+}
+
+.about-container {
 	display: flex;
-	gap: 30px;
+	justify-content: center;
+}
+
+.about-wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 50%;
+}
+
+.about-wrapper p {
+	width:70%;
+	text-align: justify;
+}
+
+.map-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+.map-wrapper img {
+	display: block;
+	width: 300px;
 }
 
 /*FOOTER*/
