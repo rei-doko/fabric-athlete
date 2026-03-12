@@ -11,6 +11,12 @@ main {
 
 :root {
 	--bg-color: linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20));
+	--text-color: black;
+}
+
+[data-theme="dark"] {
+	--bg-color: linear-gradient(rgb(50,65,75),rgb(50,50,75),rgb(20,20,45),rgb(0,0,25));
+	--text-color: white;
 }
 
 body {
@@ -450,7 +456,7 @@ background:transparent;
 /*ABOUT*/
 
 #about-title {
-	margin-left: 15%;
+	margin-left: 9%;
 }
 
 article{
@@ -479,6 +485,7 @@ article img{
 	overflow: hidden;
 	background-color: white;
 	box-shadow:0 10px 15px rgba(25,25,25,0.5);
+	width: 90%;
 }
 
 .about-table thead {
@@ -506,7 +513,7 @@ article img{
 }
 
 .about-wrapper p {
-	width:70%;
+	width:90%;
 	text-align: justify;
 }
 
@@ -517,7 +524,7 @@ article img{
 
 .map-wrapper img {
 	display: block;
-	width: 300px;
+	width: 500px;
 }
 
 /*FOOTER*/

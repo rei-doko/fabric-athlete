@@ -1,15 +1,26 @@
-function toggleTheme(clickedCheckbox) {
-  const lightBox = document.getElementById('light-theme');
-  const darkBox = document.getElementById('dark-theme');
+function toggleTheme(selected) {
+    const theme = selected === 'light' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('user-theme', theme);
 
-  if (clickedCheckbox.id === 'light-theme' && clickedCheckbox.checked) {
-    darkBox.checked = false;
-    document.documentElement.style.setProperty('--bg-color','linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20))');
-  }
-  else if (clickedCheckbox.id === 'dark-theme' && clickedCheckbox.checked) {
-    lightBox.checked = false;
-    document.documentElement.style.setProperty('--bg-color','linear-gradient(rgb(50,65,75),rgb(50,50,75),rgb(20,20,45),rgb(0,0,25))');
-  }
+    syncCheckboxes(theme);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('user-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    syncCheckboxes(savedTheme);
+});
+
+function syncCheckboxes(theme) {
+    const lightBox = document.getElementById('light-theme');
+    const darkBox = document.getElementById('dark-theme');
+
+    if (lightBox && darkBox) {
+        lightBox.checked = (theme === 'light');
+        darkBox.checked = (theme === 'dark');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,14 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 
+  // Product Container - opening and closing description
+
   const products = document.querySelectorAll('.product');
 
   products.forEach(product => {
     const desc = product.querySelector('.product-description');
 
     product.addEventListener('click', () => {
+      // Activates the product
       const isActive = product.classList.contains('active');
 
+      // Closes descriptions of all products except active
       products.forEach(p => {
         p.classList.remove('active');
         p.querySelector('.product-description').style.maxHeight = null;
@@ -53,6 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
       });
     });
+
+  // Cart
+
+
     const cartButtons = document.querySelectorAll('.addcart');
     const checkoutWrapper = document.querySelector('.checkout-wrapper');
     const totalElement = document.querySelector('.checkout-button p');
