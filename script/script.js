@@ -1,15 +1,26 @@
-function toggleTheme(clickedCheckbox) {
-  const lightBox = document.getElementById('light-theme');
-  const darkBox = document.getElementById('dark-theme');
+function toggleTheme(selected) {
+    const theme = selected === 'light' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('user-theme', theme);
 
-  if (clickedCheckbox.id === 'light-theme' && clickedCheckbox.checked) {
-    darkBox.checked = false;
-    document.documentElement.style.setProperty('--bg-color','linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20))');
-  }
-  else if (clickedCheckbox.id === 'dark-theme' && clickedCheckbox.checked) {
-    lightBox.checked = false;
-    document.documentElement.style.setProperty('--bg-color','linear-gradient(rgb(50,65,75),rgb(50,50,75),rgb(20,20,45),rgb(0,0,25))');
-  }
+    syncCheckboxes(theme);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('user-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    syncCheckboxes(savedTheme);
+});
+
+function syncCheckboxes(theme) {
+    const lightBox = document.getElementById('light-theme');
+    const darkBox = document.getElementById('dark-theme');
+
+    if (lightBox && darkBox) {
+        lightBox.checked = (theme === 'light');
+        darkBox.checked = (theme === 'dark');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
