@@ -483,7 +483,7 @@ background:transparent;
 /*ABOUT*/
 
 #about-title {
-	margin-left: 9%;
+	justify-content: center;
 }
 
 article{
