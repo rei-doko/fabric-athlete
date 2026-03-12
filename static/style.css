@@ -11,6 +11,12 @@ main {
 
 :root {
 	--bg-color: linear-gradient(rgb(255,255,255),rgb(255,255,255),rgb(225,200,190),rgb(21,20,20));
+	--text-color: black;
+}
+
+[data-theme="dark"] {
+	--bg-color: linear-gradient(rgb(32,33,62), rgb(25,26,48), rgb(15,15,25), rgb(0,0,0));
+	--text-color: white;
 }
 
 body {
